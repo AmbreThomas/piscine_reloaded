@@ -11,15 +11,15 @@
 # **************************************************************************** #
 
 CC = gcc
-FLAGS = -Wall -Wextra -Werrori
+FLAGS = -Wall -Wextra -Werror
 SRC_PATH = srcs
 SRC_NAMES = ft_putchar.c ft_putstr.c ft_strcmp.c ft_strlen.c ft_swap.c
+OBJ = ft_putchar.o ft_putstr.o ft_strcmp.o ft_strlen.o ft_swap.o
 SRC = $(addprefix $(SRC_PATH)/, $(SRC_NAMES))
-OBJ = $(SRC:.c=.o)
 HEADERS_PATH = includes
-HEADERS = libft.h
+HEADERS_NAMES = libft.h
+HEADERS = $(addprefix $(HEADERS_PATH)/, $(HEADERS_NAMES))
 NAME = libft.a
-
 
 .PHONY: all, clean, fclean, re
 
